@@ -11,7 +11,7 @@ async function addSong(){
         genre: document.querySelector("#genre").value ? document.querySelector("#genre").value.split(",") : [] // split up into an array
     }
 
-    const response = await fetch("http://localhost:3000/api/songs",{ 
+    const response = await fetch("https://strong-angry-diver.glitch.me",{ 
         method: "POST",
         headers:{
             "Content-Type" : "application/json"
