@@ -13,7 +13,7 @@ async function login(username, password) {
     const login_cred = {
         username, password
     }
-    const response = await fetch("http://localhost:3000/api/auth/", {
+    const response = await fetch("https://complete-octagonal-hippopotamus.glitch.me/api/auth/", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"
@@ -32,7 +32,7 @@ async function login(username, password) {
         localStorage.setItem("uname", uname)
         localStorage.setItem("auth", auth)
 
-        window.location.replace("/frontend/index.html")
+        window.location.replace("/index.html")
         }
     else {
         document.querySelector("errorMsg").innerHTML = "Bad username and password.";
