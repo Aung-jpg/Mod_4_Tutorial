@@ -7,7 +7,7 @@ class Auth{
 
     validateAuth(auth){
         if(auth != 1){
-            window.location.replace("/login.html")
+            window.location.replace("/frontend/login.html")
         } else {
             document.querySelector("body").style.display = "block"
         }
@@ -18,6 +18,6 @@ class Auth{
         localStorage.removeItem("token")
         localStorage.removeItem("uname")
 
-        window.location.replace("/login.html")
+        window.location.replace("/frontend/login.html")
     }
 }
