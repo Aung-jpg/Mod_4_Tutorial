@@ -4,7 +4,7 @@ addEventListener("DOMContentLoaded", async function(){
     const songId = urlparam.get('id')
     console.log(songId)
 
-    const response = await fetch("https://strong-angry-diver.glitch.me" + songId)
+    const response = await fetch("http://localhost:3000/api/songs/" + songId)
     const song = await response.json()
     console.log(song)
 

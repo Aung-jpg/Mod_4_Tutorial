@@ -8,10 +8,11 @@ async function addSong(){
         artist: document.querySelector("#artist").value,
         releaseDate: document.querySelector("#released").value,
         popularity: document.querySelector("#popularity").value,
-        genre: document.querySelector("#genre").value ? document.querySelector("#genre").value.split(",") : [] // split up into an array
+        genre: document.querySelector("#genre").value ? document.querySelector("#genre").value.split(",") : [], // split up into an array
+        username: localStorage.getItem("uname")
     }
 
-    const response = await fetch("https://strong-angry-diver.glitch.me",{ 
+    const response = await fetch("http://localhost:3000/api/songs",{ 
         method: "POST",
         headers:{
             "Content-Type" : "application/json"
